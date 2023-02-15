@@ -1,0 +1,29 @@
+CREATE TABLE wallys (id INTEGER, bike TEXT, parts TEXT, developer TEXT, quantity INTEGER, cost INTEGER);
+
+INSERT INTO wallys VALUES(1,"schwinn","handle bar","tsk", 4,120);
+INSERT INTO wallys VALUES(2,"bmx","lug","moom", 2,100);
+INSERT INTO wallys VALUES(3,"republica","seat","dryrun", 4,75);
+INSERT INTO wallys VALUES(4,"schwinn","brake","tsk", 2,175);
+INSERT INTO wallys VALUES(5,"bmx","chains","dryrun", 4,36);
+INSERT INTO wallys VALUES(6,"schwin","rope","tsk", 1,12);
+INSERT INTO wallys VALUES(7,"republica","seat cover","tsk", 2,16);
+INSERT INTO wallys VALUES(8,"bmx","fwd wheel","moom", 2,48);
+INSERT INTO wallys VALUES(9,"republica","rear wheel","moom", 4,127);
+INSERT INTO wallys VALUES(10,"republica","pulley","dryrun", 1,74);
+INSERT INTO wallys VALUES(11,"schwinn","back brake","dryrun",3,75);
+INSERT INTO wallys VALUES(12,"bmx","horn","moom", 1,8);
+INSERT INTO wallys VALUES(13,"schwinn","basket","tsk", 4,134);
+INSERT INTO wallys VALUES(14,"bmx","lock","moom", 4,25);
+INSERT INTO wallys VALUES(15,"bmx","fwd wheel","moom", 2,48);
+
+Show me average cost of parts in wallys?
+SELECT AVG (cost) FROM wallys;
+
+Show all the developers who are TSK?
+SELECT developer FROM wallys WHERE developer= "tsk";
+
+Show me the cost of bikes that are greater than $100 and put them in descending order?
+SELECT cost FROM wallys WHERE cost > 100 ORDER BY cost desc;
+
+Show me the count of bikes in wallys that are created by schwinn?
+SELECT COUNT(bike) FROM wallys WHERE "bike" = "schwinn"; 
